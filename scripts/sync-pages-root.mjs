@@ -1,7 +1,7 @@
 import { cpSync, existsSync, mkdirSync, readdirSync, rmSync } from "node:fs";
 
 const files = ["index.html", "index.txt", "404.html"];
-const directories = ["404", "admin", "_next"];
+const directories = ["404", "admin", "products", "_next"];
 
 for (const file of files) {
   cpSync(`out/${file}`, file);

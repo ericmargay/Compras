@@ -6,7 +6,7 @@
     "line": "Ligero, preciso y hecho para jugar en serio.",
     "cost": 3499,
     "condition": "Nuevo",
-    "image": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09ZLV2531&Format=_SL1200_&ID=AsinImage&MarketPlace=MX&ServiceVersion=20070822",
+    "image": "products/deathadder-v3-pro.jpg",
     "accent": "#c9ff62",
     "specs": ["63 g ultraligero", "Sensor Focus Pro 30K", "Hasta 90 h de batería", "HyperSpeed inalámbrico"],
     "story": "Una forma ergonómica muy cómoda, especialmente para manos medianas y grandes. Su peso se nota desde el primer movimiento."
@@ -18,7 +18,7 @@
     "line": "El mouse de trabajo que hace todo más fluido.",
     "cost": 2399,
     "condition": "Nuevo",
-    "image": "https://m.media-amazon.com/images/I/61ni3t1ryQL._AC_SL1200_.jpg",
+    "image": "products/mx-master-3s.jpg",
     "accent": "#ffb78a",
     "specs": ["Sensor de 8,000 DPI", "Clicks 90% más silenciosos", "Hasta 70 días de batería", "Conecta hasta 3 equipos"],
     "story": "Ideal para diseño, edición, Excel o programación. El scroll MagSpeed y la rueda lateral cambian mucho el ritmo de trabajo."
@@ -30,7 +30,7 @@
     "line": "Más espacio en el escritorio, menos tensión en el cuello.",
     "cost": 2499,
     "condition": "Nuevo",
-    "image": "https://m.media-amazon.com/images/I/61zm1qcMNEL._AC_SL1200_.jpg",
+    "image": "products/wali-dual.jpg",
     "accent": "#8ed8ff",
     "specs": ["Para 2 monitores de 13–32″", "Hasta 10 kg por brazo", "VESA 75×75 / 100×100", "Giro, inclinación y rotación"],
     "story": "Acabado blanco y brazos ajustables con resorte mecánico. Libera la cubierta del escritorio y ayuda a encontrar una postura cómoda."
@@ -42,7 +42,7 @@
     "line": "Wi‑Fi estable en toda la casa, sin zonas muertas.",
     "cost": 4999,
     "condition": "Nuevo",
-    "image": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09VVV18D9&Format=_SL1200_&ID=AsinImage&MarketPlace=MX&ServiceVersion=20070822",
+    "image": "products/deco-x50.jpg",
     "accent": "#ffd768",
     "specs": ["Wi‑Fi 6 AX3000", "Sistema mesh de 3 nodos", "Cobertura aprox. 600 m²", "3 puertos Gigabit por unidad"],
     "story": "Una sola red que te acompaña por la casa. Se configura desde la app Deco y puede trabajar como router o punto de acceso."
@@ -54,7 +54,7 @@
     "line": "Mecánico, inalámbrico y sorprendentemente delgado.",
     "cost": 4499,
     "condition": "Nuevo",
-    "image": "https://m.media-amazon.com/images/I/91dfsjvXgIS._AC_SL1200_.jpg",
+    "image": "products/g915-tkl.jpg",
     "accent": "#c5b6ff",
     "specs": ["Formato TKL compacto", "Switches GL Linear", "LIGHTSPEED de 1 ms", "RGB LIGHTSYNC · hasta 40 h"],
     "story": "Construcción de aluminio y teclas de perfil bajo. Cambia entre LIGHTSPEED y Bluetooth con un botón."
@@ -66,7 +66,7 @@
     "line": "Una superficie amplia, suave y con buen control.",
     "cost": 699,
     "condition": "Nuevo",
-    "image": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0885NTLKJ&Format=_SL1200_&ID=AsinImage&MarketPlace=MX&ServiceVersion=20070822",
+    "image": "products/gigantus-v2.jpg",
     "accent": "#93e59b",
     "specs": ["450 × 400 mm", "3 mm de grosor", "Tejido microtexturizado", "Base de goma antideslizante"],
     "story": "Da espacio para movimientos largos sin ocupar todo el escritorio. El balance está entre velocidad y control."
@@ -78,7 +78,7 @@
     "line": "Audio competitivo sin cable y con gran comodidad.",
     "cost": 3499,
     "condition": "Nuevo",
-    "image": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08FQG96RP&Format=_SL1200_&ID=AsinImage&MarketPlace=MX&ServiceVersion=20070822",
+    "image": "products/blackshark-v2-pro.jpg",
     "accent": "#ff9eb0",
     "specs": ["Drivers TriForce Titanium 50 mm", "THX Spatial Audio", "Micrófono desmontable", "Hasta 24 h de batería"],
     "story": "Esta es la generación 2020: ligera, con aislamiento pasivo y conexión inalámbrica 2.4 GHz de baja latencia."
@@ -90,7 +90,7 @@
     "line": "Potencia real para jugar, crear y trabajar.",
     "cost": 23999,
     "condition": "Seminuevo",
-    "image": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0C54XM58R&Format=_SL1200_&ID=AsinImage&MarketPlace=MX&ServiceVersion=20070822",
+    "image": "products/dell-g15-5530.png",
     "accent": "#74dfcf",
     "specs": ["Core i5‑13450HX · 10 núcleos", "GeForce RTX 3050 6 GB", "16 GB DDR5 · SSD 512 GB", "Pantalla 15.6″ FHD 120 Hz"],
     "story": "Una laptop robusta con refrigeración de doble ventilador. Está usada y bien cuidada; la configuración se confirma físicamente antes de cerrar."
@@ -102,7 +102,7 @@
     "line": "Sonido Bose portátil en azul crepúsculo.",
     "cost": 3499,
     "condition": "Seminuevo",
-    "image": "https://assets.bosecreative.com/transform/c4f0196c-24ea-4e0f-b3d8-f94035436d8b/SLFLXII_BlueDusk_SF_PDP_Gallery_01?io=width%3A816%2Cheight%3A667%2Ctransform%3Afit&quality=90",
+    "image": "products/bose-soundlink-flex.jpg",
     "accent": "#8fb8d8",
     "specs": ["Hasta 12 h de batería", "Resistencia IP67", "Bluetooth multipunto", "PositionIQ y USB‑C"],
     "story": "Color azul crepúsculo de edición limitada. Es resistente al agua y al polvo, pesa 590 g y ajusta el sonido según su posición."
