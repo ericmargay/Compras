@@ -99,7 +99,7 @@ export default function AdminPage() {
             <article className="admin-row" key={item.asin}>
               <div className="admin-product">
                 <span style={{background: item.accent}}>{String(index + 1).padStart(2, "0")}</span>
-                <div><small>{item.asin}</small><strong>{item.name}</strong></div>
+                <div><small>{item.asin} · {item.images?.length ?? 0} fotos</small><strong>{item.name}</strong></div>
               </div>
               <label>
                 Costo base
@@ -120,7 +120,7 @@ export default function AdminPage() {
 
       <aside className="admin-help">
         <strong>Para publicar los cambios</strong>
-        <p>Descarga el JSON, reemplaza <code>data/products.json</code> y ejecuta <code>npm run pages</code>. El comando actualiza automáticamente los archivos publicados en la raíz.</p>
+        <p>Descarga el JSON, reemplaza <code>data/products.json</code> y coloca tus screenshots en la carpeta de cada producto dentro de <code>public/products</code>. Después ejecuta <code>npm run pages</code>: detectará automáticamente JPG, PNG, WebP o AVIF y actualizará los archivos publicados en la raíz.</p>
       </aside>
     </main>
   );

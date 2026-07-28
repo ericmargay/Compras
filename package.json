@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next build",
-    "pages": "GITHUB_ACTIONS=true GITHUB_REPOSITORY=ericmargay/Compras next build && node scripts/sync-pages-root.mjs",
+    "images": "node scripts/sync-product-images.mjs",
+    "pages": "node scripts/sync-product-images.mjs && GITHUB_ACTIONS=true GITHUB_REPOSITORY=ericmargay/Compras next build && node scripts/sync-pages-root.mjs",
     "start": "next start"
   },
   "dependencies": {

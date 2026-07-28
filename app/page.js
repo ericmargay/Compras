@@ -21,9 +21,15 @@ export default function Home() {
   const [filter, setFilter] = useState("Todo");
   const [selected, setSelected] = useState(null);
   const [months, setMonths] = useState(6);
+  const [galleryIndex, setGalleryIndex] = useState(0);
   const categories = ["Todo", ...new Set(products.map((p) => p.category))];
   const visible = useMemo(() => filter === "Todo" ? products : products.filter((p) => p.category === filter), [filter]);
   const total = selected ? Math.round(selected.cost * 1.12) : 0;
+  const openProduct = (product) => {
+    setSelected(product);
+    setMonths(6);
+    setGalleryIndex(0);
+  };
 
   return (
     <main>
@@ -60,10 +66,11 @@ export default function Home() {
         <div className="grid">
           {visible.map((p, i) => (
             <article className="product" key={p.asin} style={{"--accent": p.accent}}>
-              <button className="image-wrap" onClick={() => {setSelected(p); setMonths(6)}} aria-label={`Ver ${p.name}`}>
+              <button className="image-wrap" onClick={() => openProduct(p)} aria-label={`Ver ${p.name}`}>
                 <span className={`tag condition-${p.condition === "Nuevo" ? "new" : "used"}`}>{p.condition}</span>
                 <img src={p.image} alt={p.name} onError={(e) => { e.currentTarget.style.display = "none"; e.currentTarget.nextSibling.style.display = "grid"; }} />
                 <span className="fallback" aria-hidden="true">{p.name.split(" ")[0]}</span>
+                <span className="photo-count">{p.images.length} fotos</span>
                 <span className="number">0{i + 1}</span>
               </button>
               <div className="product-copy">
@@ -72,7 +79,10 @@ export default function Home() {
                 <p>{p.line}</p>
                 <div className="card-bottom">
                   <Price cost={p.cost} compact />
-                  <button className="round" onClick={() => {setSelected(p); setMonths(6)}} aria-label="Ver detalles">↗</button>
+                  <div className="card-actions">
+                    <a className="amazon-link" href={p.amazonUrl} target="_blank" rel="noreferrer">Ver en Amazon ↗</a>
+                    <button className="round" onClick={() => openProduct(p)} aria-label="Ver detalles">↗</button>
+                  </div>
                 </div>
               </div>
             </article>
@@ -101,13 +111,26 @@ export default function Home() {
           <section className="modal" role="dialog" aria-modal="true" aria-label={selected.name}>
             <button className="close" onClick={() => setSelected(null)}>Cerrar ×</button>
             <div className="modal-image" style={{"--accent": selected.accent}}>
-              <img src={selected.image} alt={selected.name} />
+              <div className="gallery-stage">
+                <img src={selected.images?.[galleryIndex] ?? selected.image} alt={`${selected.name}, vista ${galleryIndex + 1}`} />
+                <button className="gallery-arrow previous" aria-label="Foto anterior" onClick={() => setGalleryIndex((galleryIndex - 1 + selected.images.length) % selected.images.length)}>←</button>
+                <button className="gallery-arrow next" aria-label="Foto siguiente" onClick={() => setGalleryIndex((galleryIndex + 1) % selected.images.length)}>→</button>
+                <span className="gallery-count">{galleryIndex + 1} / {selected.images?.length ?? 1}</span>
+              </div>
+              <div className="gallery-thumbs">
+                {(selected.images ?? [selected.image]).map((image, index) => (
+                  <button className={galleryIndex === index ? "active" : ""} key={image} onClick={() => setGalleryIndex(index)} aria-label={`Ver foto ${index + 1}`}>
+                    <img src={image} alt="" />
+                  </button>
+                ))}
+              </div>
               <span className={`tag condition-${selected.condition === "Nuevo" ? "new" : "used"}`}>{selected.condition}</span>
             </div>
             <div className="modal-content">
               <p className="category">{selected.category} · {selected.asin}</p>
               <h2>{selected.name}</h2>
               <p className="modal-story">{selected.story}</p>
+              <p className="detail-heading">Lo importante, de un vistazo</p>
               <ul>{selected.specs.map((s) => <li key={s}><span>✓</span>{s}</li>)}</ul>
               <div className="finance">
                 <div className="finance-top"><span>Tu plan de pago</span><strong>{months} meses</strong></div>
@@ -117,7 +140,7 @@ export default function Home() {
               </div>
               <div className="modal-actions">
                 <a className="primary" href={`https://wa.me/?text=${encodeURIComponent(`Hola, me interesa ${selected.name}. ¿Me cuentas cómo está y qué incluye?`)}`} target="_blank" rel="noreferrer">Me interesa · WhatsApp</a>
-                <a className="secondary" href={`https://www.amazon.com.mx/dp/${selected.asin}`} target="_blank" rel="noreferrer">Ver referencia original ↗</a>
+                <a className="secondary" href={selected.amazonUrl} target="_blank" rel="noreferrer">Ver referencia original ↗</a>
               </div>
               <p className="fineprint">Precio sugerido calculado con costo de referencia + 12%. Confirma precio, condición, accesorios y plazo directamente conmigo.</p>
             </div>
